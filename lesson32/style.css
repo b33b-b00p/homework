@@ -1,0 +1,22 @@
+body{
+    font-size: 40px;
+}
+*{
+    box-sizing: border-box;
+}
+.block1,
+.block2,
+.inline{
+    background-color: beige;
+}
+.block1{
+    border: 5px solid red;
+}
+.block2{
+}
+.inline{
+
+}
+.img{
+    border-radius: 1000px;
+}

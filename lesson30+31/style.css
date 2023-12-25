@@ -1,0 +1,27 @@
+body{
+    font-size: 40px;
+}
+*{
+    box-sizing: border-box;
+}
+.block1,
+.block2,
+.inline{
+    background-color: beige;
+}
+.block1{
+    padding: 20px 70px;
+
+    margin-bottom: 50px;
+}
+.block2{
+    padding: 20px 70px;
+
+    margin-top: 100px;
+}
+.inline{
+
+}
+.img{
+    
+}

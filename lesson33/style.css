@@ -1,0 +1,24 @@
+body{
+    font-size: 40px;
+}
+*{
+    box-sizing: border-box;
+}
+.block1,
+.block2,
+.inline{
+    background-color: beige;
+}
+.block1{
+    box-shadow: inset 0px 0px 50px red;
+    border-radius: 1000px;
+    padding: 20px;
+}
+.block2{
+}
+.inline{
+
+}
+.img{
+    border-radius: 1000px;
+}

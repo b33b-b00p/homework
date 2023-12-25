@@ -1,0 +1,22 @@
+body{
+    font-size: 40px;
+}
+*{
+    box-sizing: border-box;
+}
+.block,
+.inline{
+    background-color: beige;
+}
+.block{
+    display: inline-block;
+    margin: 10px;
+    width: 400px;
+}
+.inline{
+    display: none;
+}
+.img{
+    display: block;
+    margin: 10px;
+}

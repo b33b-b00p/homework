@@ -1,0 +1,14 @@
+body{
+    font-size: 40px;
+}
+.block{
+    max-width: 600px;
+    max-height: 800px;
+}
+.inline{
+
+}
+.img{
+    width: 1000px;
+    height: 400px;
+}

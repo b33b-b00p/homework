@@ -1,0 +1,44 @@
+body{
+    background-color: black;
+    color: gray;
+    font-size: 30px;
+}
+.block{
+    margin: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: gray;
+    color: greenyellow;
+    position: relative;
+    top: 35vh;
+    left: 43vw;
+}
+.text{
+    visibility: hidden;
+    position: absolute;
+    margin: 0;
+    top: 40%;
+    left: 25%;
+
+    transition-property: visibility;
+    transition-delay: 1s;
+}
+.line{
+    width: 20px;
+    height: 40px;
+    background-color: white;
+
+    position: absolute;
+    top: -120px;
+    left: -130px;
+
+    transition: width 1s 0s, background-color 1s .9s;
+}
+.block:hover>.line{
+    width: 450px;
+    background-color: greenyellow;
+}
+.block:hover>.text{
+    visibility: visible;
+}

@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+}
+.red{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+.red:hover{
+    transform: scale(2);
+}
+
+.list-item:last-child{
+    color: red;
+}

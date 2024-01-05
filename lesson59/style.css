@@ -7,8 +7,9 @@ body{
     background-color: red;
     width: 100px;
     height: 100px;
-    margin: 20% auto;
-    animation: spin 1s infinite;
+    margin: 20% 0;
+    animation: spin 1s infinite alternate, move-right 1s infinite alternate;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes spin{
@@ -17,5 +18,13 @@ body{
     }
     100%{
         transform: rotate(360deg);
+    }
+}
+@keyframes move-right{
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: calc(100% - 100px);
     }
 }

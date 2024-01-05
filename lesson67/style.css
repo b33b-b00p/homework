@@ -1,0 +1,40 @@
+:root{
+    --text1-color: #ad0404;
+    --text1-border: 4px solid #eb2222;
+    --text1-fz: 16px;
+    
+    --text2-color: #003cbd;
+    --text2-border: 4px dashed #0099ff;
+    --text2-fz: 24px;
+    
+    --text3-color: #6200ff;
+    --text3-border: 4px double #9c00da;
+    --text3-fz: 32px;
+}
+body{
+    background-color: black;
+    color: gray;
+    font-size: 24px;
+}
+.section{
+    margin: 10vh auto 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    text-align: center;
+}
+.section__text--1{
+    color: var(--text1-color);
+    border: var(--text1-border);
+    font-size: var(--text1-fz);
+}
+.section__text--2{
+    color: var(--text2-color);
+    border: var(--text2-border);
+    font-size: var(--text2-fz);
+}
+.section__text--3{
+    color: var(--text3-color);
+    border: var(--text3-border);
+    font-size: var(--text3-fz);
+}

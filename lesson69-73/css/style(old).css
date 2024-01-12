@@ -1,0 +1,199 @@
+/* :root{
+    --font-color-main: #25282B;
+    --font-color-secondary: #1D6FB6;
+    --font-color-secondary-hover:
+} */
+body{
+    font-family: "Montserrat", "Arial", sans-serif;
+    line-height: 125%;
+    color: #25282B;
+    background-color: #F8FCFF;
+}
+
+.container{
+    max-width: 1230px; /* change */
+    padding: 0 15px; /*change? */
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* ============================================= */
+
+/**** header ****/
+.header{
+    min-height: 108px;
+    padding: 30px 0;
+}
+
+.header_inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.header__list{
+    display: flex;
+    gap: 30px;
+}
+
+/**** main ****/
+/*** hero ***/
+.hero{
+    background-color: #102E49CC; /* вопрос! (урок 71 25:00) почему стоит объявлять псевдо-элемент, если можно задать 80% прозрачность сразу bg секции? */
+    color: #F8FCFF;
+    padding: 120px 0;
+    position: relative;
+}
+.hero__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 288px;
+    margin: 0 auto;
+}
+.hero__title{
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 150%;
+    text-align: center;
+}
+.hero__list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 0 40px;
+}
+.hero__list-item{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 18px;
+    font-size: 24px;
+    line-height: 150%;
+}
+.hero__list-icon{
+    width: 24px;
+    height: 24px;
+}
+.hero__list-text{
+    text-align: center;
+}
+.hero__video-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.button{
+    display: block;
+    background-color: #D0DCE7;
+    padding: 18px 30px;
+    color: #1D6FB6;
+    border-radius: 100px;
+    max-width: 289px;
+    text-align: center;
+    font-weight: 500;
+    align-self: center;
+    width: 100%;
+}
+
+/*** main__general ***/
+.main__general{
+    padding: 120px;
+}
+.main__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 126px;
+}
+
+.sidebar{
+    border: 2px solid #D0DCE7;
+    padding: 30px;
+    max-height: 50%;
+    max-width: 282px;
+}
+/* .sidebar__nav{
+
+} */
+.sidebar__list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 500;
+}
+/* .sidebar__list-item{
+
+}
+.sodebar__link{
+
+} */
+
+.main__body{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+.info-section{
+    max-width: 792px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+}
+.info-section__fraction{
+    max-width: 384px;
+    max-height: 384px;
+}
+.info-section__fraction--multi{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.info-section__fraction--multi .info-section__item{
+    max-width: 180px;
+    max-height: 180px;
+}
+
+.buy-list{
+    max-width: 792px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; /* change it to auto, don't remember how to do it */
+    gap: 24px;
+}
+.buy-list__item{
+    max-width: 384px;
+    max-height: 354px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #D0DCE7;
+}
+.buy-list__item .button{
+    margin: 30px 0;
+}
+
+/**** footer ****/
+.footer{
+    min-height: 80px;
+    padding: 30px 0;
+    background-color: #788088;
+    color: #F8FCFF;
+}
+.footer__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

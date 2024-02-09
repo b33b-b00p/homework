@@ -3,7 +3,7 @@
     document.addEventListener('click', burgerInit)
     function burgerInit(e) {
 
-        if(document.documentElement.clientWidth > 1200) return
+        if(document.documentElement.clientWidth > 1300) return
         
         const burgerIcon = e.target.closest('.burger-icon');
         const burgerNavLink = e.target.closest('.nav__link');

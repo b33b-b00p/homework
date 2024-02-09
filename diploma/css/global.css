@@ -10,14 +10,14 @@ html {
     font-family: var(--font-family);
     line-height: 1.4;
     color: #fff;
-    background-color: #111111;
+    background: url("../img/decor/bg-main.jpg") 50% 50% / cover repeat;
 }
-/* .body--opened-menu {
+.body--opened-menu {
     overflow: hidden;
 }
 .body--opened-modal {
     overflow: hidden;
-} */
+}
 
 .wrapper {
     min-height: 100%;
@@ -89,5 +89,58 @@ html {
     opacity: 1;
     visibility: visible;
     transition: opacity .4s, visibility .4s;
+}
+/* ================================================= */
+.socials {
+
+}
+.socials__list {
+    display: flex;
+    gap: 10px;
+
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+}
+.socials__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.socials__item::after {
+    content: '|';
+    font-weight: 400;
+    font-size: 15px;
+    color: #333;
+}
+.socials__item:last-child::after {
+    content: '';
+    font-weight: 400;
+    font-size: 15px;
+    color: #333;
+}
+.socials__link {
+}
+.socials__link--facebook {
+    background: -webkit-linear-gradient(#0052FF 30%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.socials__link--twitter {
+    background: -webkit-linear-gradient(#09BBFF 30%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.socials__link--dribbble {
+    background: -webkit-linear-gradient(#EA4C89 30%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.socials__link--instagram { 
+    background: -webkit-linear-gradient(#565BC9 30%, #CC3385 60%, #F69E54 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 /* ================================================= */

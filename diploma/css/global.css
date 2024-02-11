@@ -212,6 +212,28 @@ html {
     left: -12%;
 }
 /* ================================================= */
+.link {
+    position: absolute;
+    inset: 0;
+}
+.link-arrow{
+    width: 40px;
+    height: 40px;
+    background-color: #FF7425;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity .4s, visibility .4s;
+}
+/* ================================================= */
 .socials {
 
 }

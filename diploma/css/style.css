@@ -219,28 +219,7 @@
 .features__services-item:last-child {
     margin-bottom: 0;
 }
-.link {
-    position: absolute;
-    inset: 0;
-}
 .features__link {
-}
-.link-arrow{
-    width: 40px;
-    height: 40px;
-    background-color: #FF7425;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    visibility: hidden;
-
-    transition: opacity .4s, visibility .4s;
 }
 .features__services-item--link:hover .features__link-arrow {
     opacity: 1;
@@ -298,8 +277,94 @@
 .features__services-text {
 
 }
-
 /* ================================================= */
+    .services {
+
+    }
+    .main__services {
+
+    }
+    .services__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services__item {
+        
+    }
+    .services__img {
+        /* max-width: 720px; */
+
+        position: relative;
+    }
+    .services__img img{
+        width: 100%;
+    
+        -webkit-filter: saturate(0%) brightness(96%) contrast(96%) sepia(6%);
+        filter: saturate(0%) brightness(96%) contrast(96%) sepia(6%);
+    
+        transition: filter .4s;
+    }
+    .services__item:hover img {
+        -webkit-filter: none;
+        filter: none;
+    }
+    .services__link {
+
+    }
+    .services__link-arrow {
+        width: 70px;
+        height: 70px;
+        bottom: 7.6%;
+        right: 4.3%;
+        /* right: 19.3%; */
+
+        transition: opacity .4s, visibility .4s;
+        /* transition-delay: .2s; */
+    }
+    .services__link-arrow svg {
+        width: 26px;
+        height: 30px;
+    }
+    .services__item:hover .services__link-arrow {
+        opacity: 1;
+        visibility: visible;
+        /* right: 4.3%; */
+    }
+    .services__heading {
+        position: absolute;
+        bottom: 7.6%;
+        left: 3.9%;
+
+        /* transition: left .4s; */
+    }
+    /* .services__item:hover .services__heading {
+        left: 18.7%;
+    } */
+    .services__subtitle {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1.4;
+        color: #ff7425;
+    }
+    .services__title {
+        font-size: 50px;
+        line-height: 1.4;
+    }
+/* ================================================= */
+@media (max-width: 1440px) {
+    .services__heading {
+        left: 3%;
+    }
+    .services__title {
+        font-size: 40px;
+    }
+    .services__link-arrow {
+        width: 50px;
+        height: 50px;
+        bottom: 8.4%;
+        right: 3.3%;
+    }
+}
 @media (max-width: 1300px) {
     .nav {
         position: fixed;
@@ -382,6 +447,7 @@
     .about__images {
         left: 0;
     }
+
 }
 @media (max-width: 1100px) {
     .footer__inner {
@@ -401,6 +467,22 @@
 
     .about__images {
         display: none;
+    }
+
+    .services__inner {
+        grid-template-columns: 1fr;
+    }
+    .services__heading {
+        left: 3.9%;
+    }
+    .services__title {
+        font-size: 50px;
+    }
+    .services__link-arrow {
+        width: 70px;
+        height: 70px;
+        bottom: 7.6%;
+        right: 4.3%;
     }
 }
 @media (max-width: 1000px) {
@@ -458,6 +540,11 @@
     .button {
         margin-left: 37px;
     }
+
+    .link-arrow {
+        opacity: 1;
+        visibility: visible;
+    }
     
     .header__top {
         margin-bottom: 80px;
@@ -498,6 +585,19 @@
     }
     .footer__bottom span {
         margin-right: 20px;
+    }
+
+    .services__heading {
+        left: 3%;
+    }
+    .services__title {
+        font-size: 40px;
+    }
+    .services__link-arrow {
+        width: 50px;
+        height: 50px;
+        bottom: 8.4%;
+        right: 3.3%;
     }
 }
 @media (max-width: 600px) {
@@ -544,6 +644,18 @@
         align-self: flex-start;
         /* margin-left: 37px; */
     }
+
+    .services__link-arrow {
+        width: 40px;
+        height: 40px;
+        bottom: 9.7%;
+        right: 3%;
+    }
+    .services__link-arrow svg{
+        width: 22px;
+        height: 24px;
+    }
+    
 }
 @media (max-width: 450px) {
     .nav {
@@ -632,5 +744,24 @@
     .features__button--mobile {
         align-self: center;
         /* margin-top: 15px; */
+    }
+
+
+    .services__heading {
+        /* left: 3%; */
+    }
+    .services__subtitle {
+        
+    }
+    .services__title {
+        font-size: 21px;
+    }
+    .services__link-arrow {
+        width: 30px;
+        height: 30px;
+    }
+    .services__link-arrow svg{
+        width: 16px;
+        height: 20px;
     }
 }

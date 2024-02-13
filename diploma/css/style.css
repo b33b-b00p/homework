@@ -540,6 +540,87 @@
     width: 100%;
 }
 /* ================================================= */
+.newsletter {
+
+}
+.main__newsletter {
+    padding-bottom: 124px;
+}
+.newsletter__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 37px;
+    text-align: center;
+    /* max-width: 668px; */
+
+    position: relative;
+}
+.newsletter__inner::before {
+    content: url('../img/decor/shapes/shape-6.svg');
+    position: absolute;
+    bottom: 95.7%;
+    right: -4%;
+}
+.newsletter__inner::after {
+    content: url('../img/decor/shapes/shape-7.svg');
+    position: absolute;
+    bottom: 30.6%;
+    left: -2.7%;
+}
+
+.newsletter__heading {
+    max-width: 668px;
+}
+.newsletter__subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+
+    margin-bottom: 51px;
+}
+.newsletter__title {
+    font-size: 60px;
+}
+.newsletter__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    max-width: 250px;
+    max-height: 250px;
+    width: 250px;
+    height: 250px;
+    /* width: 17.4vw; */
+    /* height: 17.4vw; */
+    border-radius: 100%;
+    background-color: #333;
+
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.18em;
+}
+.newsletter__link-text {
+    /* position: relative; */
+    padding-top: 41px;
+}
+.newsletter__link-img {
+    display: block;
+    width: 26px;
+    height: 30px;
+
+    /* position: absolute; */
+    /* bottom: 28.8%;
+    left: 44.8%; */
+    /* bottom: -181.2%;
+    left: 42.7%; */
+}
+.newsletter__link-img img {
+    width: 100%;
+}
+/* ================================================= */
 @media (max-width: 1440px) {
     .services__heading {
         left: 3%;
@@ -629,6 +710,14 @@
     .about__images {
         left: 0;
     }
+
+    .newsletter__inner::before,
+    .newsletter__inner::after  {
+        content: '';
+    }
+    /* .newsletter__link-text {
+        letter-spacing: 0.13em;
+    } */
 
     .footer__inner {
         grid-template-columns: 1fr 1fr 1fr;
@@ -906,6 +995,10 @@
     .cover-photo {
         height: 240px;
     }
+
+    .newsletter__title {
+        font-size: 48px;
+    }
 }
 @media (max-width: 450px) {
     .nav {
@@ -1052,5 +1145,16 @@
     }
     .partners__item {
         max-width: 16.4vw;
+    }
+
+    .newsletter__subtitle {
+        margin-bottom: 30px;
+    }
+    .newsletter__title {
+        font-size: 33px;
+    }
+    .newsletter__link {
+        width: 210px;
+        height: 210px;
     }
 }

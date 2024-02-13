@@ -296,6 +296,10 @@
     position: relative;
     left: 0%;
 }
+/* есть ли более адаптивние решение без nth-child? 
+я пробовал много вещей, включая js,
+но без индивидуальных настроек 
+не получается полноценно выравнить с макетом */
 .stats__item:nth-child(1) {
     max-width: 239px;
 }
@@ -409,84 +413,99 @@
     font-size: 120px;
     color: #FFF;
     opacity: 70%;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .animated-text__text--hollow {
     color: transparent;
     -webkit-text-stroke: 3px #FFF0F0;
 }
 /* ================================================= */
-    .services {
+.services {
 
-    }
-    .main__services {
+}
+.main__services {
 
-    }
-    .services__inner {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .services__item {
-        
-    }
-    .services__img {
-        /* max-width: 720px; */
-
-        position: relative;
-    }
-    .services__img img{
-        width: 100%;
+}
+.services__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.services__item {
     
-        -webkit-filter: saturate(0%) brightness(96%) contrast(96%) sepia(6%);
-        filter: saturate(0%) brightness(96%) contrast(96%) sepia(6%);
-    
-        transition: filter .4s;
-    }
-    .services__item:hover img {
-        -webkit-filter: none;
-        filter: none;
-    }
-    .services__link {
+}
+.services__img {
+    /* max-width: 720px; */
 
-    }
-    .services__link-arrow {
-        width: 70px;
-        height: 70px;
-        bottom: 7.6%;
-        right: 4.3%;
-        /* right: 19.3%; */
+    position: relative;
+}
+.services__img img{
+    width: 100%;
 
-        transition: opacity .4s, visibility .4s;
-        /* transition-delay: .2s; */
-    }
-    .services__link-arrow svg {
-        width: 26px;
-        height: 30px;
-    }
-    .services__item:hover .services__link-arrow {
-        opacity: 1;
-        visibility: visible;
-        /* right: 4.3%; */
-    }
-    .services__heading {
-        position: absolute;
-        bottom: 7.6%;
-        left: 3.9%;
+    -webkit-filter: saturate(0%) brightness(96%) contrast(96%) sepia(6%);
+    filter: saturate(0%) brightness(96%) contrast(96%) sepia(6%);
 
-        /* transition: left .4s; */
-    }
-    /* .services__item:hover .services__heading {
-        left: 18.7%;
-    } */
-    .services__subtitle {
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 1.4;
-        color: #ff7425;
-    }
-    .services__title {
-        font-size: 50px;
-        line-height: 1.4;
-    }
+    transition: filter .4s;
+}
+.services__item:hover img {
+    -webkit-filter: none;
+    filter: none;
+}
+.services__link {
+
+}
+.services__link-arrow {
+    width: 70px;
+    height: 70px;
+    bottom: 7.6%;
+    right: 4.3%;
+    /* right: 19.3%; */
+
+    transition: opacity .4s, visibility .4s;
+    /* transition-delay: .2s; */
+}
+.services__link-arrow svg {
+    width: 26px;
+    height: 30px;
+}
+.services__item:hover .services__link-arrow {
+    opacity: 1;
+    visibility: visible;
+    /* right: 4.3%; */
+}
+.services__heading {
+    position: absolute;
+    bottom: 7.6%;
+    left: 3.9%;
+
+    /* transition: left .4s; */
+}
+/* .services__item:hover .services__heading {
+    left: 18.7%;
+} */
+.services__subtitle {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #ff7425;
+}
+.services__title {
+    font-size: 50px;
+    line-height: 1.4;
+}
+/* ================================================= */
+.cover-photo {
+    background: url("../img/decor/cover-photo.jpg") 50% 50% / cover no-repeat;
+    height: 34.7vw;
+}
+/* .cover-photo img {
+    width: 100%;
+} */
+.main__cover-photo {
+    padding-bottom: 92px;
+}
 /* ================================================= */
 @media (max-width: 1440px) {
     .services__heading {
@@ -566,13 +585,6 @@
         max-width: 134px;
     }
 
-    .footer__inner {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .footer__col-email {
-        font-size: 23px;
-    }
-    
     .about__bg-shape,
     .features__bg-shape {
         display: none;
@@ -585,23 +597,14 @@
         left: 0;
     }
 
+    .footer__inner {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .footer__col-email {
+        font-size: 23px;
+    }
 }
 @media (max-width: 1100px) {
-    .footer__inner {
-        gap: 0 15px;
-        grid-template-columns: 1fr 1fr;
-    }
-    .footer__list {
-        gap: 0 15px;
-    }
-    .footer__inner .footer__col:last-child {
-        margin-top: 62px;
-        /* padding-left: 30px; */
-        justify-self: center;
-        text-align: center;
-        grid-column: 1 / -1;
-    }
-
     .about__images {
         display: none;
     }
@@ -624,6 +627,21 @@
         height: 70px;
         bottom: 7.6%;
         right: 4.3%;
+    }
+
+    .footer__inner {
+        gap: 0 15px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer__list {
+        gap: 0 15px;
+    }
+    .footer__inner .footer__col:last-child {
+        margin-top: 62px;
+        /* padding-left: 30px; */
+        justify-self: center;
+        text-align: center;
+        grid-column: 1 / -1;
     }
 }
 @media (max-width: 1000px) {
@@ -684,6 +702,10 @@
         justify-content: center;
         gap: 0px 30px;
     }
+
+    .cover-photo {
+        height: 400px;
+    }
 }
 @media (max-width: 800px) {
     .button {
@@ -704,6 +726,23 @@
     }
     .hero__title span{
         font-size: 100px;
+    }
+
+    .services__heading {
+        left: 3%;
+    }
+    .services__title {
+        font-size: 40px;
+    }
+    .services__link-arrow {
+        width: 50px;
+        height: 50px;
+        bottom: 8.4%;
+        right: 3.3%;
+    }
+
+    .cover-photo {
+        height: 320px;
     }
 
     .footer__inner {
@@ -734,19 +773,6 @@
     }
     .footer__bottom span {
         margin-right: 20px;
-    }
-
-    .services__heading {
-        left: 3%;
-    }
-    .services__title {
-        font-size: 40px;
-    }
-    .services__link-arrow {
-        width: 50px;
-        height: 50px;
-        bottom: 8.4%;
-        right: 3.3%;
     }
 }
 @media (max-width: 600px) {
@@ -839,7 +865,10 @@
         width: 22px;
         height: 24px;
     }
-    
+
+    .cover-photo {
+        height: 240px;
+    }
 }
 @media (max-width: 450px) {
     .nav {
@@ -969,5 +998,10 @@
     .services__link-arrow svg{
         width: 16px;
         height: 20px;
+    }
+
+    .cover-photo {
+        /* display: none; */
+        height: 160px;
     }
 }

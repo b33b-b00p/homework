@@ -496,6 +496,129 @@
     line-height: 1.4;
 }
 /* ================================================= */
+.testimonials {
+
+}
+.main__testimonials {
+    padding-bottom: 101px;
+}
+.testimonials__inner {
+    display: flex;
+    gap: 30px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.testimonials__clients {
+    max-width: 570px;
+    font-family: var(--second-family);
+    /* position: relative; */
+}
+.testimonials__img-slider {
+    padding-bottom: 28px;
+}
+.testimonials__img-wrapper {
+}
+.testimonials__img-slide.swiper-slide {
+    /* max-width: 170px; */
+
+    -webkit-filter: saturate(0%) brightness(96%) contrast(96%) sepia(6%);
+    filter: saturate(0%) brightness(96%) contrast(96%) sepia(6%);
+    transition: filter .4s;
+}
+.testimonials__img-slide.swiper-slide-active {
+    -webkit-filter: none;
+    filter: none;
+}
+.testimonials__img-slide.swiper-slide::before {
+    /* content: ''; */
+    content: url('../img/icons/quote.svg');
+    position: absolute;
+    top: 90%;
+    left: 67.7%;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.1%;
+    padding-left: 0.1%;
+    
+    width: 40px;
+    height: 40px;
+    background-color: #FF7425;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 180ms, visibility 180ms;
+}
+.testimonials__img-slide.swiper-slide-active::before {
+    /* content: url('../img/icons/quote.svg'); */
+    visibility: visible;
+    opacity: 1;
+}
+.testimonials__img-slide img {
+    /* width: 100%; */
+    /* max-width: 170px; */
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.testimonials__author-slider {
+
+}
+.testimonials__author-wrapper {
+
+}
+.testimonials__author-slide {
+
+}
+.testimonials__author-name {
+    /* margin-top: 28px; */
+    font-weight: 600;
+    font-size: 20px;
+    padding-left: 35.5%;
+}
+.testimonials__author-credentials {
+    font-size: 13px;
+    color: #ff7425;
+    padding-left: 35.5%;
+}
+
+.testimonials__content {
+    max-width: 570px;
+}
+.testimonials__title {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+.testimonials__quote {
+    font-style: italic;
+    font-size: 24px;
+}
+
+.testimonials__nav {
+    display: flex;
+    gap: 15px;
+    margin-top: 42px;
+}
+.testimonials__prev,
+.testimonials__next {
+    border-radius: 100%;
+    background-color: #454545;
+    width: 45px;
+    height: 45px;
+
+    transition: background-color .4s;
+}
+.testimonials__prev:hover,
+.testimonials__next:hover {
+    background-color: #333;
+}
+/* ================================================= */
 .cover-photo {
     background: url("../img/decor/cover-photo.jpg") 50% 50% / cover no-repeat;
     height: 34.7vw;

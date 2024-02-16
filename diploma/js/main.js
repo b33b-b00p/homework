@@ -43,27 +43,28 @@
     }
     //testimonials
     new Swiper('.testimonials__img-slider', {
-        slidesPerView: 3,
+        slidesPerView: 1.5,
         centeredSlides: true,
         spaceBetween: 30,
         lazyLoading: true,
         initialSlide: 1,
         loop: true,
-        speed: 800,
+        allowTouchMove: false,
+        speed: 700,
 
         navigation: {
             nextEl: '.testimonials__next',
             prevEl: '.testimonials__prev',
         },
         
-        // breakpoints: {
-        //     901: {
-        //         slidesPerView: 1.5,
-        //     },
-        //     1201: {
-        //         slidesPerView: 2.1,
-        //     },
-        // },
+        breakpoints: {
+            341: {
+                slidesPerView: 2.1,
+            },
+            451: {
+                slidesPerView: 3,
+            },
+        },
     });
 
     new Swiper('.testimonials__author-slider', {
@@ -71,6 +72,7 @@
         slidesPerView: 1,
         initialSlide: 1,
         loop: true,
+        allowTouchMove: false,
         speed: 700,
         // centeredSlides: true,
 
@@ -94,6 +96,7 @@
         slidesPerView: 1,
         initialSlide: 1,
         loop: true,
+        allowTouchMove: false,
         speed: 700,
         // centeredSlides: true,
 

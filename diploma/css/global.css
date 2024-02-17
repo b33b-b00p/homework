@@ -303,3 +303,166 @@ html {
     line-height: 1.35;
     color: #fff;
 }
+/* ================================================= */
+.accordion-list__item {
+    margin-bottom: 20px;
+}
+.accordion-list__item:last-child {
+    margin-bottom: 0;
+}
+.accordion-list__control {
+    padding: 20px 21px;
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.44;
+    color: #fff;
+    text-align: left;
+    
+    transition: padding-bottom .4s;
+}
+.accordion-list__item--opened .accordion-list__control {
+    padding-bottom: 25px;
+}
+.accordion-list__control-icon {
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    transition: transform .4s;
+}
+.accordion-list__control-icon path{
+    stroke-width: 1.2px;
+    transition: stroke .4s;
+}
+
+.accordion-list__control:hover .accordion-list__control-icon{
+    transform: rotate(-90deg);
+}
+.accordion-list__item--opened .accordion-list__control-icon{
+    transform: rotate(-90deg);
+}
+
+.accordion-list__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .4s;
+    background-color: #222;
+    color: #aaa;
+}
+
+.accordion-content {
+    padding: 0 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 96%;
+}
+.accordion-content__col:first-child {
+    max-width: none;
+}
+.accordion-content__title {
+    font-weight: 600;
+    line-height: 1.6;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #fff;
+    color: #FF7425;
+}
+.accordion-content__item {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 8px;
+}
+.accordion-content__item:last-child {
+    margin-bottom: 0;
+}
+.accordion-content__icon {
+    width: 24px;
+    height: 24px;
+    transform: rotate(-90deg);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding-left: 0.2%;
+}
+.accordion-content__text {
+    text-align: justify;
+    max-width: none;
+}
+/* ================================================= */
+.progressbar {
+    font-family: var(--font-family);
+    line-height: 1.4;
+    margin-bottom: 40px;
+}
+.progressbar:last-child {
+    margin-bottom: 0;
+}
+.progressbar__title {
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 27px;
+}
+.progressbar__body {
+    width: 100%;
+    background-color: #ffffff1a;
+}
+.progressbar__progress {
+    height: 7px;
+    background-color: #ff7425;
+    text-align: center;
+    line-height: 7px;
+    position: relative;
+}
+
+.progressbar__progress#website-and-mobile {
+    width: 0%;
+}
+.progressbar__progress#desktop-app {
+    width: 0%;
+}
+.progressbar__progress span{
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: #aaa;
+
+    position: absolute;
+    top: -330%;
+    right: min(-3.8%, -6px);
+}
+.progressbar__progress::after {
+    content: url('../img/icons/progression-mark.svg');
+    width: 10px;
+    height: 8px;
+
+    position: absolute;
+    top: -170%;
+    right: min(1%, -6px);
+}
+@keyframes progress__website-and-mobile {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 78%;
+    }
+}
+@keyframes progress__desktop-app {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 95%;
+    }
+}

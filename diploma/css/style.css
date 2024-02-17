@@ -829,16 +829,19 @@
         z-index: 10;
         background-color: #111111;
         max-width: 450px;
-        padding: 26vh 15px 30px;
+        padding: 20vh 15px 30px;
         font-size: 24px;
         
         transform: translateX(100%);
         opacity: 0;
         visibility: hidden;
         transition: transform .4s, opacity .4s, visibility .4s;
+
+        overflow-y: scroll
     }
     .nav__item {
         align-items: center;
+        text-align: center;
     }
     .nav__list {
         flex-direction: column;
@@ -854,6 +857,18 @@
     }
     .user-nav__item:last-child {
         display: flex;
+    }
+    /* dropdown */
+    .dropdown {
+        position: relative;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        
+        font-size: 18px;
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
     }
 
     .hero__content {
@@ -966,6 +981,7 @@
     .nav {
         inset: 0;
         max-width: none;
+        padding-top: 26vh;
 
         transform: translateY(-100%);
     }

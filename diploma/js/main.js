@@ -7,10 +7,11 @@
         
         const burgerIcon = e.target.closest('.burger-icon');
         const burgerNavLink = e.target.closest('.nav__link');
-
-        e.preventDefault();
-        if(!burgerIcon && !burgerNavLink) return
+        const burgerDropdownLink = e.target.closest('.dropdown__link');
         
+        if(!burgerIcon && 
+            (!burgerNavLink || burgerNavLink.classList.contains('nav__link--dropdown'))
+            && !burgerDropdownLink) return
 
         if(!document.body.classList.contains('body--opened-menu')) {
             document.body.classList.add('body--opened-menu');

@@ -680,4 +680,7 @@
     .footer__inner .footer__col:last-child {
         gap: 30px;
     }
+    .footer__list {
+        max-height: none;
+    }
 }

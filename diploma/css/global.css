@@ -15,7 +15,6 @@
 
 html {
     scroll-behavior: smooth;
-    /* scroll-padding-top: 5vh; */
 }
 .main__about,
 .main__features,
@@ -33,9 +32,6 @@ html {
 .body--opened-menu {
     overflow: hidden;
 }
-/* .body--opened-modal {
-    overflow: hidden;
-} */
 
 .wrapper {
     min-height: 100%;
@@ -78,15 +74,8 @@ html {
     flex-wrap: wrap;
 }
 .nav__item {
-    /* display: flex;
-    align-items: flex-start;
-    gap: 3px; */
-
-
     /* dropdown */
     position: relative;
-    /* transition: height .4s; */
-    /* float: left; */
 }
 .nav__item:hover .nav__link{
     color: var(--accent-color);
@@ -94,15 +83,9 @@ html {
 .nav__link {
     transition: color .4s;
     /* dropdown */
-    /* display: block; */
     cursor: pointer;
     display: inline-flex;
-    /* align-items: flex-start; */
     gap: 3px;
-}
-.nav__link:hover { /* dropdown */
-    /* dropdown */
-    /* background-color: white; */
 }
 .nav__expand svg{
     height: 100%;
@@ -177,6 +160,7 @@ html {
 }
 .user-nav__item {
     padding: 5px 0;
+    cursor: pointer;
 }
 .user-nav__item:last-child {
     display: none;
@@ -204,9 +188,6 @@ html {
 
     top: -1.4%;
     left: 53%;
-}
-.user-nav__link {
-
 }
 /* ================================================= */
 .burger-icon {
@@ -263,7 +244,6 @@ html {
 }
 /* ================================================= */
 .button {
-    /* display: block; */
     display: flex;
     align-items: center;
     font-family: var(--font-family);
@@ -292,7 +272,6 @@ html {
 
     z-index: -1;
     position: absolute;
-    /* top: -31.7%; */
     left: -12%;
 }
 /* ================================================= */
@@ -318,9 +297,6 @@ html {
     transition: opacity .4s, visibility .4s;
 }
 /* ================================================= */
-.socials {
-
-}
 .socials__list {
     display: flex;
     gap: 10px;
@@ -346,8 +322,6 @@ html {
     font-weight: 400;
     font-size: 15px;
     color: var(--element-bg-lighter);
-}
-.socials__link {
 }
 .socials__link--facebook {
     background: -webkit-linear-gradient(#0052FF 30%, #FFFFFF 100%);

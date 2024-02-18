@@ -1,7 +1,7 @@
 .footer {
     font-weight: 500;
     font-size: 15px;
-    color: #aaa;
+    color: var(--general-text);
     background-color: #111111;
 }
 .footer__inner {
@@ -30,12 +30,12 @@
     max-width: 150px;
     padding: 8px 16px;
     width: 100%;
-    background-color: #ff7425;
+    background-color: var(--accent-color);
 
     font-weight: 500;
     font-size: 13px;
     line-height: 1.82;
-    color: #fff;
+    color: var(--title-text);
 }
 .footer__col-tel img{
     width: 12px;
@@ -49,7 +49,7 @@
     font-weight: 700;
     font-size: 20px;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--title-text);
 
     margin: 6px 0 32px;
 }
@@ -66,13 +66,13 @@
 
 }
 .footer__link {
-
+    transition: color .4s;
 }
 .footer__col-email {
     font-family: var(--second-family);
     font-weight: 600;
     font-size: 30px;
-    color: #fff;
+    color: var(--title-text);
 
     margin-top: 30px;
 }
@@ -85,11 +85,16 @@
     justify-content: space-between;
     padding: 25px 0 29px;
     border-top: 1px solid #ffffff26;
-    color: #888;
+    color: var(--subtitle-text);
 }
-.footer__bottom span {
+.footer__bottom-link {
     margin-right: 53px;
+    transition: color .4s;
 }
-.footer__bottom span:last-child {
+.footer__bottom-link:last-child {
     margin-right: 0;
+}
+.footer__link:hover,
+.footer__bottom-link:hover{
+    color: var(--accent-color);
 }

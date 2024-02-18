@@ -38,11 +38,11 @@
     font-weight: 600;
     font-size: 100px;
     line-height: 1.2;
-    color: #fff;
+    color: var(--title-text);
 }
 .hero__title span{
     font-size: 150px;
-    color: #ff7425;
+    color: var(--accent-color);
 }
 .hero__text {
     max-width: 670px;
@@ -88,8 +88,8 @@
     font-family: var(--second-family);
     font-weight: 600;
     font-size: 60px;
-    color: #fff;
+    color: var(--title-text);
 }
 .hero__info-text {
-    color: #aaa;
+    color: var(--general-text);
 }

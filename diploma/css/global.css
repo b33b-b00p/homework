@@ -1,15 +1,33 @@
 :root {
     --font-family: "Plus Jakarta Sans", sans-serif;
     --second-family: "Poppins", sans-serif;
+
+    --accent-color: #FF7425;
+
+    --subtitle-text: #888;
+    --title-text: #FFF;
+    --general-text: #AAA;
+    --hollow-text-color: #FFF0F0;
+
+    --element-bg-lighter: #333;
+    --element-bg-darker: #222;
 }
+
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 1vh;
+    /* scroll-padding-top: 5vh; */
 }
+.main__about,
+.main__features,
+.main__testimonials,
+.main__newsletter {
+    padding-top: 5vh;
+}
+
 .body {
     font-family: var(--font-family);
     line-height: 1.4;
-    color: #fff;
+    color: var(--title-text);
     background: url("../img/decor/bg-main.jpg") 50% 50% / cover repeat;
 }
 .body--opened-menu {
@@ -50,7 +68,7 @@ html {
     width: 100%;
     font-weight: 600;
     letter-spacing: 0.07em;
-    color: #fff;
+    color: var(--title-text);
     text-transform: uppercase;
 }
 .nav__list {
@@ -71,12 +89,13 @@ html {
     /* float: left; */
 }
 .nav__item:hover .nav__link{
-    color: #ff7425;
+    color: var(--accent-color);
 }
 .nav__link {
     transition: color .4s;
     /* dropdown */
     /* display: block; */
+    cursor: pointer;
     display: inline-flex;
     /* align-items: flex-start; */
     gap: 3px;
@@ -98,7 +117,7 @@ html {
     transform: rotate(-90deg);
 }
 .nav__item:hover .nav__expand path{
-    stroke: #ff7425;
+    stroke: var(--accent-color);
 }
 /* dropdown */
 .dropdown {
@@ -107,7 +126,7 @@ html {
     left: -20%;
 
     font-size: 14px;
-    color: #aaa;
+    color: var(--general-text);
     width: max-content;
     background-color: #111111e6;
     padding: 15px 40px 20px 18px;
@@ -126,20 +145,20 @@ html {
     margin-bottom: 0;
 }
 .dropdown__item:hover {
-    color: #FF7425;
+    color: var(--accent-color);
 }
 .dropdown__link {
     transition: color .4s;
     padding: 5px 0;
 }
 .nav__item:focus-within {
-    color: #FF7425;
+    color: var(--accent-color);
 }
 .nav__item:focus-within .nav__expand svg{
     transform: rotate(-90deg);
 }
 .nav__item:focus-within .nav__expand path{
-    stroke: #ff7425;
+    stroke: var(--accent-color);
 }
 .nav__item:focus-within .dropdown {
     display: initial;
@@ -174,8 +193,8 @@ html {
     position: absolute;
     width: 13px;
     height: 13px;
-    background-color: #ff7425;
-    color: #fff;
+    background-color: var(--accent-color);
+    color: var(--title-text);
     border-radius: 100%;
     font-size: 10px;
     font-weight: 800;
@@ -207,7 +226,7 @@ html {
     width: 15px;
     height: 1.5px;
     border-radius: 100px;
-    background-color: #fff;
+    background-color: var(--title-text);
 
     transition: transform .4s, background-color .4s;
 }
@@ -252,7 +271,7 @@ html {
     font-size: 16px;
     line-height: 1.4;
     letter-spacing: 0.18em;
-    color: #fff;
+    color: var(--title-text);
     text-transform: uppercase;
 
     max-width: 188px;
@@ -266,7 +285,7 @@ html {
 }
 .button::before {
     content: '';
-    background-color: #ff7425;
+    background-color: var(--accent-color);
     border-radius: 100%;
     width: 60px;
     height: 60px;
@@ -284,7 +303,7 @@ html {
 .link-arrow{
     width: 40px;
     height: 40px;
-    background-color: #FF7425;
+    background-color: var(--accent-color);
     
     display: flex;
     justify-content: center;
@@ -320,13 +339,13 @@ html {
     content: '|';
     font-weight: 400;
     font-size: 15px;
-    color: #333;
+    color: var(--element-bg-lighter);
 }
 .socials__item:last-child::after {
     content: '';
     font-weight: 400;
     font-size: 15px;
-    color: #333;
+    color: var(--element-bg-lighter);
 }
 .socials__link {
 }
@@ -358,7 +377,7 @@ html {
     font-size: 14px;
     line-height: 1.6;
     letter-spacing: 0.15em;
-    color: #888;
+    color: var(--subtitle-text);
     text-transform: uppercase;
 }
 .title {
@@ -366,7 +385,7 @@ html {
     font-weight: 600;
     font-size: 40px;
     line-height: 1.35;
-    color: #fff;
+    color: var(--title-text);
 }
 /* ================================================= */
 .accordion-list__item {
@@ -378,7 +397,7 @@ html {
 .accordion-list__control {
     padding: 20px 21px;
     width: 100%;
-    background-color: #222;
+    background-color: var(--element-bg-darker);
     display: flex;
     justify-content: space-between;
     gap: 15px;
@@ -386,7 +405,7 @@ html {
     font-size: 20px;
     font-weight: 600;
     line-height: 1.44;
-    color: #fff;
+    color: var(--title-text);
     text-align: left;
     
     transition: padding-bottom .4s;
@@ -419,8 +438,8 @@ html {
     max-height: 0;
     overflow: hidden;
     transition: all .4s;
-    background-color: #222;
-    color: #aaa;
+    background-color: var(--element-bg-darker);
+    color: var(--general-text);
 }
 
 .accordion-content {
@@ -438,8 +457,8 @@ html {
     line-height: 1.6;
     text-transform: uppercase;
     margin-bottom: 20px;
-    color: #fff;
-    color: #FF7425;
+    color: var(--title-text);
+    color: var(--accent-color);
 }
 .accordion-content__item {
     margin-bottom: 20px;
@@ -475,7 +494,7 @@ html {
 .progressbar__title {
     font-weight: 700;
     font-size: 18px;
-    color: #fff;
+    color: var(--title-text);
     margin-bottom: 27px;
 }
 .progressbar__body {
@@ -484,7 +503,7 @@ html {
 }
 .progressbar__progress {
     height: 7px;
-    background-color: #ff7425;
+    background-color: var(--accent-color);
     text-align: center;
     line-height: 7px;
     position: relative;
@@ -500,7 +519,7 @@ html {
     display: block;
     font-weight: 500;
     font-size: 16px;
-    color: #aaa;
+    color: var(--general-text);
 
     position: absolute;
     top: -330%;
